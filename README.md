@@ -1,6 +1,6 @@
 # hackernews-workflow
 
-A VM0 agent for Hacker News workflows.
+> Built with [VM0](https://github.com/vm0-ai/vm0)
 
 ## Setup Instructions
 
