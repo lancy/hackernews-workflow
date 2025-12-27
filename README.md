@@ -1,1 +1,43 @@
-# hacknews-workflow
+# hackernews-workflow
+
+A VM0 agent for Hacker News workflows.
+
+## Setup Instructions
+
+### 1. Initialize VM0 Agent
+
+```bash
+vm0 init
+```
+
+This will prompt you to enter an agent name and create the necessary files:
+- `vm0.yaml` - Agent configuration
+- `AGENTS.md` - Agent documentation
+
+### 2. Setup GitHub Actions
+
+Configure GitHub Actions workflows for automated publishing and running:
+
+```bash
+vm0 setup-github
+```
+
+This command will:
+- Check prerequisites (GitHub CLI, authentication, vm0.yaml)
+- Create workflow files:
+  - `.github/workflows/publish.yml`
+  - `.github/workflows/run.yml`
+- Automatically set up GitHub secrets:
+  - `CLAUDE_CODE_OAUTH_TOKEN`
+  - `VM0_TOKEN`
+
+### 3. Deploy
+
+Commit and push the workflow files:
+```bash
+git add .
+git commit -m "init: vm0 workflow"
+git push origin main
+```
+
+Push to the main branch to trigger the publish workflow.
