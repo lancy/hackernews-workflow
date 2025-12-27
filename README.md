@@ -24,12 +24,11 @@ vm0 setup-github
 
 This command will:
 - Check prerequisites (GitHub CLI, authentication, vm0.yaml)
+- Analyze vm0.yaml to detect required secrets and variables
 - Create workflow files:
   - `.github/workflows/publish.yml`
   - `.github/workflows/run.yml`
-- Automatically set up GitHub secrets:
-  - `CLAUDE_CODE_OAUTH_TOKEN`
-  - `VM0_TOKEN`
+- Automatically set up GitHub secrets and variables
 
 ### 3. Deploy
 
